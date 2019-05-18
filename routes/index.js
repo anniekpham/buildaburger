@@ -1,3 +1,2 @@
-module.exports = _ => {
-    require('./burger')
-}
+const router = require('./burger')
+module.exports = router
