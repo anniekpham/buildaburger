@@ -1,1 +1,30 @@
-<h1>home</h1>
+<header class="title">
+    <img src="/assets/css/burger-561-1098188.png" alt="burger" class="burgerimg">
+    <span>BurgerMania</span>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center enter_section">
+            <h1 class="subtitle">Order Your Burger.</h1>
+            <form action="/burgers" method="POST">
+                <input type="text" class="burgerinput" name="burger_name" value="">
+                <button type="submit" class="submit" id="makeburger">Burger it!</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="burgers">
+    <h1 class="subtitle2">Your Order</h1>
+    {{#each burgers}}
+        <h1>{{this.id}}. {{this.burger_name}}</h1>
+        <button class="devour" id="{{this.id}}">Devour it!</button>
+    {{/each}}
+</div>
+<div class="eaten">
+    <h1 class="subtitle2">Consumed</h1>
+    {{#each eatenburgers}}
+        <h1>{{this.id}}. {{this.burger_name}}</h1>
+    {{/each}}
+</div>
