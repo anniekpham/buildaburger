@@ -2,6 +2,10 @@ const {Router} = require('express')
 const router = Router()
 const burgers = require('../model/burger')
 
+router.get('/', (req, res) => {
+    return res.redirect('/burgers')
+})
+
 router.get('/burgers', (req, res) => {
     burgers.all(burgers => {
         let noteaten = []
