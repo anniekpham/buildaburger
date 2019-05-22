@@ -8,8 +8,8 @@ const { createConnection } = require('mysql2')
 //   database: 'burgers_db'
 // })
 let connection
-if (process.env.JAWS_DB) {
-  connection = createConnection(process.env.JAWS_DB)
+if (process.env.JAWSDB_URL) {
+  connection = createConnection(process.env.JAWSDB_URL)
 } else {
   connection = createConnection({
     host: 'localhost',
